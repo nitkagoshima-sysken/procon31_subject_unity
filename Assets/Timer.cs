@@ -40,10 +40,13 @@ public class Timer : MonoBehaviour
         if(totalTime <= 0f)
         {
             SceneManager.LoadScene(0);
-            decisionbutton.Turn++;
-            if(decisionbutton.Turn == 4)
+            if (decisionbutton.Turn == 3)
             {
                 SceneManager.LoadScene(1);
+            }
+            else
+            {
+                decisionbutton.Turn++;
             }
         }
         

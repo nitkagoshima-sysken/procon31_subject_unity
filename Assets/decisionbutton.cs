@@ -35,10 +35,14 @@ public class decisionbutton : MonoBehaviour
         kaitouran.bcount = 0;
         kaitouran.ycount = 0;
         kaitouran.gcount = 0;
-        Turn++;
-        if(Turn == 4)
+
+        if(Turn == 3)
         {
             SceneManager.LoadScene(1);
+        }
+        else
+        {
+            Turn++;
         }
     }
 
