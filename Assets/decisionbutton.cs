@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class decisionbutton : MonoBehaviour
 {
     public static int score;
+    public static int Turn=1;
+    public Text turntext;
     public Text scoretext;
     public  void decision()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
     private void Start()
     {
@@ -28,9 +30,23 @@ public class decisionbutton : MonoBehaviour
         }
     }
     
+    public void delete()
+    {
+        kaitouran.bcount = 0;
+        kaitouran.ycount = 0;
+        kaitouran.gcount = 0;
+        Turn++;
+        if(Turn == 4)
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+
+    
    
     private void Update()
     {
         scoretext.text = score.ToString();
+        turntext.text = Turn.ToString();
     }
 }

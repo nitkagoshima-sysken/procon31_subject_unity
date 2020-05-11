@@ -39,7 +39,13 @@ public class Timer : MonoBehaviour
         oldSeconds = seconds;
         if(totalTime <= 0f)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
+            decisionbutton.Turn++;
+            if(decisionbutton.Turn == 4)
+            {
+                SceneManager.LoadScene(1);
+            }
         }
+        
     }
 }

@@ -10,7 +10,7 @@ public class totalscore : MonoBehaviour
 
     void Start()
     {
-        Totalscore = decision3.score2;
+        Totalscore = decisionbutton.score;
     }
 
     // Update is called once per frame
